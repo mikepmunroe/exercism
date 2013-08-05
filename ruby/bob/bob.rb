@@ -16,7 +16,7 @@ class Bob
   private
 
   def nothing_is_said?(phrase)
-    phrase.to_s.strip.length == 0
+    phrase.to_s.strip.empty?
   end
 
   def yelled_at?(phrase)
