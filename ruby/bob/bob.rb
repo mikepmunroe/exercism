@@ -24,6 +24,6 @@ class Bob
   end
 
   def asked_a_question?(phrase)
-    phrase[-1, 1] == '?'
+    phrase.end_with?('?')
   end
 end
