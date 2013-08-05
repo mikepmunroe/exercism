@@ -2,11 +2,11 @@ class Bob
   
   def hey(phrase)
     case 
-    when asked_a_question?(phrase) 
+    when nothing_is_said?(phrase) 
       'Fine. Be that way!'
-    when told_something?(phrase) 
-      'Woah, chill out!'
     when yelled_at?(phrase) 
+      'Woah, chill out!'
+    when asked_a_question?(phrase) 
       'Sure.'
     else
       'Whatever.'
@@ -15,15 +15,15 @@ class Bob
 
   private
 
-  def asked_a_question?(phrase)
+  def nothing_is_said?(phrase)
     phrase.to_s.strip.length == 0
   end
 
-  def told_something?(phrase)
+  def yelled_at?(phrase)
     !phrase.match(/\p{Lower}/)
   end
 
-  def yelled_at?(phrase)
+  def asked_a_question?(phrase)
     phrase[-1, 1] == '?'
   end
 end
