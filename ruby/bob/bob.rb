@@ -1,5 +1,4 @@
 class Bob
-  attr_reader :phrase
   
   def hey(phrase)
     case 
